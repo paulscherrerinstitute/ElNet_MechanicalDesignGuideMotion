@@ -1,0 +1,63 @@
+\documentclass[english]{psi_easy}
+
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{comment} 
+
+%% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{booktabs}
+% \usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+% float placement
+\usepackage{float}
+
+% cable color bullets
+\usepackage{tikz}
+
+% for trademark sign 'circledR'
+\usepackage{amssymb}
+
+% for PSI logo on Rolfs title page
+\usepackage{epsfig}
+
+%% Set title here for EASY title page
+\PsiEasyTitle{Guideline: Mechanical Design for Motion Applications}
+
+% ---- custom commands
+% Schneidersche Einrueckung in 'itemize'
+\newcommand{\itemIndent}[2]{{\makebox[3cm]{#1:\hfill} #2.}}
+% draw colored circle
+\newcommand{\wireColor}[1]{\tikz\draw[black,fill=#1] (0,0) circle (.9ex); #1}
+\newcommand{\EtherCAT}[0]{EtherCAT$^{\tiny{\circledR}}$}
+% ---- custom commands end
+
+%% Document begins here
+\begin{document}
+
+%
+% --- Title page by R. Follath
+% comment the next line for EASY export, as the cover page is handled by the system
+\input 0_titlePage
+
+% set page counter to '2', as easy will create the cover page and need the PDF for import to start on page 2.
+\clearpage
+\setcounter{page}{2}
+
+%% TOC
+\tableofcontents
+
+%% Abstract
+\begin{abstract}
+foobar
+\end{abstract}
+
+% include body, the bones and flesh so to say
+\include{2_Main}
+
+\end{document}
